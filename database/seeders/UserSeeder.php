@@ -8,12 +8,27 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserSeeder extends Seeder
 {
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
         $users = [
             [
-                "name" => "Liya",
-                "email" => "Liya@gmail.com",
+                "name" => "Dokter",
+                "email" => "Dokter@gmail.com",
+                "password" => bcrypt("123456"),
+                "level" => "dokter",
+            ],
+            [
+                "name" => "Admin",
+                "email" => "Admin@gmail.com",
+                "password" => bcrypt("123456"),
+                "level" => "admin",
+            ],
+            [
+                "name" => "Pasien",
+                "email" => "Pasien@gmail.com",
                 "password" => bcrypt("123456"),
                 "level" => "pasien",
             ],
