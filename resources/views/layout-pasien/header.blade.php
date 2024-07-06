@@ -1,7 +1,7 @@
 <header class="fixed w-full">
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-            <a href="{{ route('pasien') }}" class="flex items-center">
+            <a href="{{ route('dashboard-pasien') }}" class="flex items-center">
                 <span class="self-center whitespace-nowrap text-black text-3xl font-bold">Harapan Bunda</span>
             </a>
             <div class="flex items-center lg:order-2">

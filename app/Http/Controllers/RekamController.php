@@ -9,7 +9,9 @@ class RekamController extends Controller
 {
     public function index()
     {
-        //
+        $rekam = Rekam::with('antrian')->get();
+        // dd($rekam);
+        return view('rekam', compact('rekam'));
     }
 
     public function create()
@@ -24,7 +26,7 @@ class RekamController extends Controller
 
     public function show(Rekam $rekam)
     {
-        //
+        
     }
 
     public function edit(Rekam $rekam)

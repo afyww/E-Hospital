@@ -9,7 +9,8 @@ class FasilitasController extends Controller
 {
     public function index()
     {
-        //
+        $fasilitas = Fasilitas::all();
+        return view('fasilitas', compact('fasilitas'));
     }
 
     public function create()

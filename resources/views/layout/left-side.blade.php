@@ -50,7 +50,7 @@
             @endif
             <li class="mt-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('antrian') }}">
                     <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
                         <svg width="20" height="20" viewBox="0 0 512 512" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -74,7 +74,7 @@
             @if (auth()->user()->level == 'admin')
             <li class="mt-2 mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('user') }}">
                     <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
                         <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
@@ -122,20 +122,20 @@
             <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black to-transparent" />
             <li class="mt-2 ml-10">
                 <a class="py-2 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('dokter') }}">
                     <span class="ml-1 font-semibold">Dokter</span>
                 </a>
             </li>
             <li class="mt-2 ml-10">
                 <a class="py-2 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('pasien') }}">
                     <span class="ml-1 font-semibold">Pasien</span>
                 </a>
             </li>
             @endif
             <li class="mt-2 mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('rekam-medis') }}">
                     <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
                         <svg width="25" height="25" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -157,7 +157,7 @@
             @if (auth()->user()->level == 'admin')
             <li class="mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
-                    href="">
+                    href="{{ route('fasilitas') }}">
                     <div class="flex h-8 w-8 bg-blue-400 rounded-xl items-center justify-center text-center">
                         <svg width="25" height="25" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">

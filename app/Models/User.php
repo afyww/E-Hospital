@@ -13,7 +13,7 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'name','email','password','level'];
+        'name','email','password','level','alamat','nik','keahlian'];
 
     protected $hidden = [
         'password',
@@ -25,4 +25,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function antrian()
+    {
+        return $this->hasMany(Antrian::class);
+    }
+    
 }

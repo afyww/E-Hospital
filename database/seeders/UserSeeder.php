@@ -8,9 +8,6 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $users = [
@@ -19,18 +16,25 @@ class UserSeeder extends Seeder
                 "email" => "Dokter@gmail.com",
                 "password" => bcrypt("123456"),
                 "level" => "dokter",
+                "alamat" => "Jl.Satrio Wibowo 3 No.73, Semarang",
+                "nik" => "3260290901",
+                "keahlian" => "Poli Gigi",
             ],
             [
                 "name" => "Admin",
                 "email" => "Admin@gmail.com",
                 "password" => bcrypt("123456"),
                 "level" => "admin",
+                "alamat" => "Jl.Satrio Wibowo 3 No.73, Semarang",
+                "nik" => "3260290902",
             ],
             [
                 "name" => "Pasien",
                 "email" => "Pasien@gmail.com",
                 "password" => bcrypt("123456"),
                 "level" => "pasien",
+                "alamat" => "Jl.Parang Kembang 3 No.73, Semarang",
+                "nik" => "3260290903",
             ],
         ];
 

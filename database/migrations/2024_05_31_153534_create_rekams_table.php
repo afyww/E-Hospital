@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('rekams', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('antrian_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('obat');
             $table->timestamps();
         });
     }

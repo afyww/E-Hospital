@@ -26,7 +26,7 @@ class AuthController extends Controller
             if ($user->level === 'admin' || $user->level === 'dokter') {
                 return redirect(route('dashboard'))->with('toast_success', 'Berhasil Login !');
             } elseif ($user->level === 'pasien') {
-                return redirect(route('pasien'))->with('toast_success', 'Berhasil Login !');
+                return redirect(route('dashboard-pasien'))->with('toast_success', 'Berhasil Login !');
             }
         }
         return back()->with('error', 'Password atau Email Salah !');
@@ -38,6 +38,9 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users|max:255',
             'password' => 'required|string|min:8|confirmed',
+            'alamat' => 'required|string|max:255',
+            'nik' => 'required|string|max:255',
+            'keahlian' => 'required|string|max:255',
             'level' => 'required|string|in:admin,pasien,dokter',
         ]);
 
@@ -45,6 +48,9 @@ class AuthController extends Controller
         $user->name = $validatedData['name'];
         $user->email = $validatedData['email'];
         $user->password = bcrypt($validatedData['password']);
+        $user->alamat = $validatedData['alamat'];
+        $user->nik = $validatedData['nik'];
+        $user->keahlian = $validatedData['keahlian'];
         $user->level = $validatedData['level'];
         $user->save();
 

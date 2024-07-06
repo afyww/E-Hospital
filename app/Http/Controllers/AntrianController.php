@@ -9,7 +9,8 @@ class AntrianController extends Controller
 {
     public function index()
     {
-        //
+        $antrian = Antrian::with('pasien', 'dokter')->get();
+        return view('antrian', compact('antrian'));
     }
 
     public function create()

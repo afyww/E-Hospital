@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Rekam extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'antrian_id', 'obat'
+    ];
+
+    public function antrian()
+    {
+        return $this->belongsTo(Antrian::class);
+    }
 }
