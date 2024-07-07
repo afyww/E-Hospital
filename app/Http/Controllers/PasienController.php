@@ -17,4 +17,12 @@ class PasienController extends Controller
     {
         return view('addpasien');
     }
+
+    public function destroy(User $pasien)
+    {
+        $pasien->delete();
+
+        return redirect()->route('user')->with('success', 'Antrian has been deleted successfully');
+    }
+
 }

@@ -17,4 +17,12 @@ class DokterController extends Controller
     {
         return view('adddokter');
     }
+
+    public function destroy(User $dokter)
+    {
+        $dokter->delete();
+
+        return redirect()->route('user')->with('success', 'Antrian has been deleted successfully');
+    }
+
 }

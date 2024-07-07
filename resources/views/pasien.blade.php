@@ -40,18 +40,18 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($pasien as $pasien)
+                                @foreach ($pasien as $item)
                                     <tr class="border-2">
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $pasien->created_at }}</td>
-                                        <td>{{ $pasien->name }}</td>
-                                        <td>{{ $pasien->nik }}</td>
-                                        <td>{{ $pasien->alamat }}</td>
+                                        <td>{{ $item->created_at }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->nik }}</td>
+                                        <td>{{ $item->alamat }}</td>
                                         <td class="">
                                             <form
                                                 class="p-2 px-10 text-white hover:text-black bg-red-500 rounded-xl text-center"
                                                 method="post"
-                                                action="">
+                                                action="{{ route('deletepasien', $item->id) }}">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit">Delete</button>

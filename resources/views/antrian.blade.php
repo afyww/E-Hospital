@@ -57,7 +57,7 @@
                                             </a>
                                             <form
                                                 class="p-2 px-10 text-white hover:text-black bg-red-500 rounded-xl text-center"
-                                                method="post" action="">
+                                                method="post" action="{{ route('deleteantrian', $item->id) }}">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit">Delete</button>

@@ -50,6 +50,8 @@ class AntrianController extends Controller
 
     public function destroy(Antrian $antrian)
     {
-        
+        $antrian->delete();
+
+        return redirect()->route('antrian')->with('success', 'Antrian has been deleted successfully');
     }
 }

@@ -56,7 +56,7 @@
                         <div class="grid grid-cols-1">
                             <div class="space-y-2">
                                 <label class="font-semibold text-black">Keluhan:</label>
-                                <textarea class="border border-gray-300 bg-gray-50 w-full rounded-xl" name="penyakit" id="penyakit" cols="10"
+                                <textarea class="p-2 border border-gray-300 bg-gray-50 w-full rounded-xl" name="penyakit" id="penyakit" cols="10"
                                     rows="10" required></textarea>
                             </div>
                         </div>

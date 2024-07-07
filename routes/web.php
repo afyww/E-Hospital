@@ -35,16 +35,19 @@ Route::middleware('auth', 'LoginAuth:admin')->group(function () {
     Route::get('/antrian', [AntrianController::class, 'index'])->name('antrian');
     Route::get('/addantrian', [AntrianController::class, 'create'])->name('addantrian');
     Route::post('/createantrian', [AntrianController::class, 'store'])->name('createantrian');
+    Route::delete('/deleteantrian/{antrian}', [AntrianController::class, 'destroy'])->name('deleteantrian');
 
     //DOKTER
 
     Route::get('/dokter', [DokterController::class, 'index'])->name('dokter');
     Route::get('/adddokter', [DokterController::class, 'create'])->name('adddokter');
+    Route::delete('/deletedokter/{dokter}', [DokterController::class, 'destroy'])->name('deletedokter');
 
     //PASIEN
 
     Route::get('/pasien', [PasienController::class, 'index'])->name('pasien');
     Route::get('/addpasien', [PasienController::class, 'create'])->name('addpasien');
+    Route::delete('/deletepasien/{pasien}', [PasienController::class, 'destroy'])->name('deletepasien');
 
     //ANTRIAN
 
