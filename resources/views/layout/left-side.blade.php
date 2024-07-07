@@ -48,6 +48,7 @@
                 </a>
             </li>
             @endif
+            @if (auth()->user()->level == 'admin')
             <li class="mt-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
                     href="{{ route('antrian') }}">
@@ -70,7 +71,7 @@
                     </div>
                 </a>
             </li>
-
+            @endif
             @if (auth()->user()->level == 'admin')
             <li class="mt-2 mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
@@ -133,6 +134,7 @@
                 </a>
             </li>
             @endif
+            @if (auth()->user()->level == 'dokter')
             <li class="mt-2 mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"
                     href="{{ route('rekam-medis') }}">
@@ -154,6 +156,7 @@
                     </div>
                 </a>
             </li>
+            @endif
             @if (auth()->user()->level == 'admin')
             <li class="mb-2">
                 <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:text-black"

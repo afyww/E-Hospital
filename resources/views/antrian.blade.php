@@ -21,7 +21,7 @@
                     <div class="flex justify-between">
                         <h1 class="font-extrabold text-3xl">Antrian</h1>
                         <a class="p-2 bg-blue-500 rounded-xl text-white hover:text-black text-center px-10"
-                            href="">Add
+                            href="{{ route('addantrian') }}">Add
                             antrian</a>
                     </div>
                 </div>
@@ -29,34 +29,31 @@
                     <div class="overflow-auto">
                         <table id="myTable" class="bg-gray-50 border-2">
                             <thead class="w-full">
-                                <th>No</th>
-                                <th>Date</th>
-                                <th>Nama</th>
-                                <th>Dokter</th>
-                                <th>Penyakit</th>
-                                <th>Action</th>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Date</th>
+                                    <th>Nama</th>
+                                    <th>Dokter</th>
+                                    <th>Penyakit</th>
+                                    <th>Action</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($antrian as $antrian)
+                                @foreach ($antrian as $item)
                                     <tr class="border-2">
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $antrian->pada_tanggal }}</td>
-                                        <td>{{ $antrian->pasien->name }}</td>
-                                        <td>{{ $antrian->dokter->name }}</td>
-                                        <td>{{ $antrian->penyakit }}</td>
+                                        <td>{{ $item->pada_tanggal }}</td>
+                                        <td>{{ $item->pasien->name }}</td>
+                                        <td>{{ $item->dokter->name }}</td>
+                                        <td>{{ $item->penyakit }}</td>
                                         <td class="flex space-x-2">
                                             <a href="">
                                                 <h1
                                                     class="p-2 px-10 text-white hover:text-black bg-yellow-500 rounded-xl text-center">
                                                     Detail</h1>
-                                            </a>
-                                            <a href="">
-                                                <h1
-                                                    class="p-2 px-10 text-white hover:text-black bg-blue-500 rounded-xl text-center">
-                                                    Edit</h1>
                                             </a>
                                             <form
                                                 class="p-2 px-10 text-white hover:text-black bg-red-500 rounded-xl text-center"

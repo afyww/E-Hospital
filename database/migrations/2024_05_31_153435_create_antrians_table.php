@@ -13,7 +13,7 @@ return new class extends Migration
             $table->date('pada_tanggal');
             $table->foreignId('pasien_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('dokter_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('penyakit');
+            $table->longText('penyakit');
             $table->timestamps();
         });
     }

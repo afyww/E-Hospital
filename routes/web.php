@@ -33,6 +33,8 @@ Route::middleware('auth', 'LoginAuth:admin')->group(function () {
     //ANTRIAN
 
     Route::get('/antrian', [AntrianController::class, 'index'])->name('antrian');
+    Route::get('/addantrian', [AntrianController::class, 'create'])->name('addantrian');
+    Route::post('/createantrian', [AntrianController::class, 'store'])->name('createantrian');
 
     //DOKTER
 
